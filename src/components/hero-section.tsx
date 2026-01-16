@@ -8,8 +8,8 @@ export function HeroSection() {
       <div className="absolute left-[42%] top-0  h-full w-px bg-(--color-4) opacity-10 hidden md:block" />
       {/* Scroll indicator */}
       {/* <div className="scroll-arrow hidden md:flex" /> */}
-      <div className="absolute left-[38.5%] top-[80%] bg-(--color-4)  hidden lg:block" >
-        <img src={arrowDown} alt="arrow down" className="w-24 opacity-75" />
+      <div className="absolute left-[38.5%] top-[80%] bg-(--color-4)  hidden lg:block">
+        <img src={arrowDown} alt="arrow down" className="w-24 opacity-100" />
       </div>
 
       <div className="container mx-auto px-4 md:px-8 py-12 md:py-20 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0">
