@@ -1,0 +1,37 @@
+const navlinks = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
+
+export function Header() {
+  return (
+    <header>
+      <nav className="flex justify-between items-center   ">
+        <div className="Oswald-Font text-2xl font-bold py-12 px-24">
+          <h1 className="text-(--color-4)">SaulDesign</h1>
+        </div>
+        <ul className="py-12 px-24 flex items-center gap-12">
+          {navlinks.map((link) => (
+            <li key={link.name}>
+              <a href={link.href} className="text-(--color-4) font-normal">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <span className="block opacity-10 w-full h-px bg-(--color-4)" />
+    </header>
+  );
+}

@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--color-1);
+}
+
+.Oswald-Font {
+  font-family: "Oswald", sans-serif;
+}
+
+:root {
+  --color-1: #222831;
+  --color-2: #393e46;
+  --color-3: #00adb5;
+  --color-4: #eeeeee;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.line-1 {
+  position: absolute;
+  width: 1px;
+  height: 1024px;
+  background-color: var(--color-4);
+  top: 0;
+  left: 37.9rem;
+}
+
+.line-2 {
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  background-color: var(--color-4);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+/* about me */
+.scroll-arrow {
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  bottom: 4rem;
+  left: 37.9rem;
+  transform: translateX(-50%);
+  border: 1px solid var(--color-2);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 18px;
+
+  background: rgba(57, 62, 70, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-4);
+}
+
+.scroll-arrow::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 32px;
+  background-color: currentColor;
+}
+
+.scroll-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  border-right: none;
+  border-bottom: none;
+  transform: translateX(-50%) translateY(5px) rotate(225deg);
+}
+
+/* recent work section */
+
+.illustration-image {
+  background-color: var(--color-1);
+  background-image: url("./assets/images/doodle items.png");
+  background-size: 30%;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.illustration-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-1);
+  opacity: 0.9;
+}
