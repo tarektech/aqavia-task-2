@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/aqavia-task-2/",
+  base: "/",
   plugins: [
     react({
       babel: {

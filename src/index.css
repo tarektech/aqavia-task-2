@@ -32,14 +32,6 @@ body {
   margin: 0 auto;
 }
 
-.line-1 {
-  position: absolute;
-  width: 1px;
-  height: 1024px;
-  background-color: var(--color-4);
-  top: 0;
-  left: 37.9rem;
-}
 
 .line-2 {
   position: absolute;
@@ -52,7 +44,7 @@ body {
   z-index: 100;
 }
 /* about me */
-.scroll-arrow {
+/* .scroll-arrow {
   width: 96px;
   height: 96px;
   position: absolute;
@@ -66,10 +58,16 @@ body {
 
   background: rgba(57, 62, 70, 0.75);
   backdrop-filter: blur(4px);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: var(--color-4);
+}
+
+@media (min-width: 1024px) {
+  .scroll-arrow {
+    display: flex;
+  }
 }
 
 .scroll-arrow::before {
@@ -95,7 +93,7 @@ body {
   border-right: none;
   border-bottom: none;
   transform: translateX(-50%) translateY(5px) rotate(225deg);
-}
+} */
 
 /* recent work section */
 

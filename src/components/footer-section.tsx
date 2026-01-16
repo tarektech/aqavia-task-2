@@ -23,11 +23,10 @@ export function FooterSection() {
   return (
     <footer className="bg-(--color-1) relative">
       {/* Vertical center line */}
-      <div className="absolute left-1/2 top-0 h-full w-px bg-(--color-4) opacity-10" />
-
-      <div className="container mx-auto py-16 px-24">
+      <div className="absolute left-[42%] top-0  h-full w-px bg-(--color-4) opacity-10 hidden md:block" />
+      <div className="container mx-auto py-8 md:py-16 px-4 md:px-24">
         {/* Navigation Links */}
-        <nav className="flex justify-center gap-16 mb-12">
+        <nav className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16 mb-8 md:mb-12">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -41,22 +40,22 @@ export function FooterSection() {
         </nav>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-4 mb-16">
+        <div className="flex justify-center gap-3 md:gap-4 mb-8 md:mb-16">
           {socialLinks.map((social) => (
             <a
               key={social.name}
               href={social.href}
-              className="w-12 h-12 rounded-full bg-(--color-2) flex items-center justify-center text-(--color-4) hover:bg-(--color-3) transition-colors"
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-(--color-2) flex items-center justify-center text-(--color-4) hover:bg-(--color-3) transition-colors"
               aria-label={social.name}
             >
-              <social.icon size={20} />
+              <social.icon size={18} className="md:w-5 md:h-5" />
             </a>
           ))}
         </div>
 
         {/* Terms and Privacy */}
-        <div className="flex justify-end">
-          <p className="text-(--color-4) opacity-70 text-sm">
+        <div className="flex justify-center md:justify-end">
+          <p className="text-(--color-4) opacity-70 text-xs md:text-sm">
             Terms of Service - Privacy Policy
           </p>
         </div>

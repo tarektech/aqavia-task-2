@@ -13,7 +13,7 @@ function App() {
     <div className="bg-(--color-1) container relative">
       <Header />
 
-      <div className="line-1 opacity-10"></div>
+      <div className="absolute left-[42%] top-0  h-full w-px bg-(--color-4) opacity-10 hidden md:block" />
       <HeroSection />
 
       <AboutSection />

@@ -1,17 +1,18 @@
 import { Keyboard, Mail, Send } from "lucide-react";
 import climbingStairs from "../assets/images/Group 2372.png";
-import curlyArrow from "../assets/images/Vector 187.png";
+import curlyArrow from "../assets/images/Vector 186.png";
 
 export function ProjectFormSection() {
   return (
-    <section className="bg-(--color-1) py-20 px-8 lg:px-16 relative overflow-hidden">
+    <section className="bg-(--color-1) py-12 md:py-20 px-4 md:px-8 lg:px-16 relative overflow-hidden">
+         <div className="absolute left-[42%] top-0  h-full w-px bg-(--color-4) opacity-10 hidden md:block -z-10 lg:z-10" />
       {/* Keyboard doodle - top right */}
-      <div className="absolute top-8 right-[45%] z-10 rotate-[-20deg]">
+      <div className="absolute top-8 right-[45%] z-10 rotate-[-20deg] hidden md:block">
         <Keyboard size={80} color="#00ADB5" strokeWidth={1.5} />
       </div>
 
       {/* Envelope doodle - bottom right */}
-      <div className="absolute bottom-16 right-16 z-10 rotate-15">
+      <div className="absolute bottom-16 right-16 z-10 rotate-15 hidden md:block">
         <Mail size={60} color="#00ADB5" strokeWidth={1.5} />
       </div>
 
@@ -28,15 +29,15 @@ export function ProjectFormSection() {
           <img
             src={curlyArrow}
             alt=""
-            className="absolute left-0 top-32 w-16 opacity-60"
+            className="hidden md:block absolute left-0 top-40 w-18  -rotate-32"
           />
 
           {/* Person climbing stairs illustration */}
-          <div className="mt-8 flex justify-center lg:justify-start">
+          <div className="-mt-10 flex justify-center lg:justify-start ml-30">
             <img
               src={climbingStairs}
               alt="Person climbing stairs illustration"
-              className="w-64 md:w-80 lg:w-96 h-auto"
+              className="w-64 h-auto"
             />
           </div>
         </div>
