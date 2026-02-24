@@ -4,3 +4,4 @@ export * from "./about-section";
 export * from "./react-work-section";
 export * from "./project-form-section";
 export * from "./footer-section";
+export * from "./language-switcher";

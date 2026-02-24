@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import courseLandingPage1 from "../assets/images/recent-work-image/course-landing-page-1.png";
 import courseLandingPage2 from "../assets/images/recent-work-image/course-landing-page-2.png";
 import courseLandingPage3 from "../assets/images/recent-work-image/course-landing-page-3.png";
@@ -20,7 +21,8 @@ const myImageRecentWork = [
   },
 ];
 
-export function MyRecentWorkSection() {
+export function MyRecentWorkSection() { 
+  const { t } = useTranslation();
   return (
     <section className="min-h-screen relative">
       <div className="illustration-image" />
@@ -31,22 +33,22 @@ export function MyRecentWorkSection() {
             {/* Title */}
             <div className="self-start w-full">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-12">
-                <span className="text-(--color-4) ">My recent </span>
-                <span className="text-(--color-3) italic">works</span>
+                <span className="text-(--color-4) ">{t("work.titlePrefix")} </span>
+                <span className="text-(--color-3) italic">{t("work.titleHighlight")}</span>
               </h2>
               {/* Filter Buttons */}
               <div className="flex flex-wrap gap-2 md:gap-4">
                 <button className="px-4 md:px-8 py-2 md:py-3 bg-(--color-3) text-white rounded-full font-semibold text-sm md:text-lg hover:opacity-90 transition-opacity">
-                  All
+                  {t("work.filters.all")}
                 </button>
                 <button className="px-4 md:px-8 py-2 md:py-3 bg-(--color-2) text-white rounded-full font-semibold text-sm md:text-lg hover:bg-(--color-3) transition-colors">
-                  UI
+                  {t("work.filters.ui")}
                 </button>
                 <button className="px-4 md:px-8 py-2 md:py-3 bg-(--color-2) text-white rounded-full font-semibold text-sm md:text-lg hover:bg-(--color-3) transition-colors">
-                  UX
+                  {t("work.filters.ux")}
                 </button>
                 <button className="px-4 md:px-8 py-2 md:py-3 bg-(--color-2) text-white rounded-full font-semibold text-sm md:text-lg hover:bg-(--color-3) transition-colors">
-                  Web Design
+                  {t("work.filters.webDesign")}
                 </button>
               </div>
             </div>

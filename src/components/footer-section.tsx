@@ -5,25 +5,31 @@ import {
   SiX,
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
-
-const navLinks = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "About me", href: "/about", icon: User },
-  { name: "Contact", href: "/contact", icon: Phone },
-];
-
-const socialLinks = [
-  { name: "Facebook", href: "#", icon: SiFacebook },
-  { name: "Instagram", href: "#", icon: SiInstagram },
-  { name: "Twitter", href: "#", icon: SiX },
-  { name: "YouTube", href: "#", icon: SiYoutube },
-];
+import { useTranslation } from "react-i18next";
+import { useRtl } from "../hooks/use-rtl";
 
 export function FooterSection() {
+  const { t } = useTranslation();
+  const isRtl = useRtl();
+
+  const navLinks = [
+    { name: t("footer.home"), href: "/", icon: Home },
+    { name: t("footer.aboutMe"), href: "/about", icon: User },
+    { name: t("footer.contact"), href: "/contact", icon: Phone },
+  ];
+
+  const socialLinks = [
+    { name: t("footer.facebook"), href: "#", icon: SiFacebook },
+    { name: t("footer.instagram"), href: "#", icon: SiInstagram },
+    { name: t("footer.twitter"), href: "#", icon: SiX },
+    { name: t("footer.youtube"), href: "#", icon: SiYoutube },
+  ];
+
   return (
     <footer className="bg-(--color-1) relative">
-      {/* Vertical center line */}
-      <div className="absolute left-[42%] top-0  h-full w-px bg-(--color-4) opacity-10 hidden md:block" />
+      <div
+        className={`absolute top-0 h-full w-px bg-(--color-4) opacity-10 hidden md:block ${isRtl ? "right-[42%]" : "left-[42%]"}`}
+      />
       <div className="container mx-auto py-8 md:py-16 px-4 md:px-24">
         {/* Navigation Links */}
         <nav className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16 mb-8 md:mb-12">
@@ -53,10 +59,9 @@ export function FooterSection() {
           ))}
         </div>
 
-        {/* Terms and Privacy */}
-        <div className="flex justify-center md:justify-end">
+        <div className={`flex justify-center ${isRtl ? "md:justify-start" : "md:justify-end"}`}>
           <p className="text-(--color-4) opacity-70 text-xs md:text-sm">
-            Terms of Service - Privacy Policy
+            {t("footer.legal")}
           </p>
         </div>
       </div>
