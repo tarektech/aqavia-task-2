@@ -1,20 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./language-switcher";
+import  {ThemeSwitchToggle}  from "./theme-switch-toggle";
 
-// const navLinks = [
-//   {
-//     name: "Home",
-//     href: "/",
-//   },
-//   {
-//     name: "About",
-//     href: "/about",
-//   },
-//   {
-//     name: "Contact",
-//     href: "/contact",
-//   },
-// ];
+
 
 export function Header() {
   const { t } = useTranslation();
@@ -43,7 +31,10 @@ export function Header() {
             </li>
           ))}
         </ul>
-        <LanguageSwitcher />
+        <div className="flex items-center gap-4">
+          <ThemeSwitchToggle />
+          <LanguageSwitcher />
+        </div>
       </nav>
 
       <span className="block opacity-10 w-full h-px bg-(--color-4)" />

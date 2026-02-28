@@ -27,6 +27,14 @@ body {
   --color-4: #eeeeee;
 }
 
+
+html.darkmode {
+  --color-1: #eeeeee; 
+  --color-2: #dddddd;
+  --color-3: #009299;
+  --color-4: #222831;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -43,57 +51,6 @@ body {
   transform: translateX(-50%);
   z-index: 100;
 }
-/* about me */
-/* .scroll-arrow {
-  width: 96px;
-  height: 96px;
-  position: absolute;
-  bottom: 4rem;
-  left: 37.9rem;
-  transform: translateX(-50%);
-  border: 1px solid var(--color-2);
-  border-radius: 10px;
-  cursor: pointer;
-  padding: 18px;
-
-  background: rgba(57, 62, 70, 0.75);
-  backdrop-filter: blur(4px);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-4);
-}
-
-@media (min-width: 1024px) {
-  .scroll-arrow {
-    display: flex;
-  }
-}
-
-.scroll-arrow::before {
-  content: "";
-  position: absolute;
-  top: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 32px;
-  background-color: currentColor;
-}
-
-.scroll-arrow::after {
-  content: "";
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  border-top: 2px solid currentColor;
-  border-left: 2px solid currentColor;
-  border-right: none;
-  border-bottom: none;
-  transform: translateX(-50%) translateY(5px) rotate(225deg);
-} */
 
 /* recent work section */
 

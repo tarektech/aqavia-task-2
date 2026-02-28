@@ -32,7 +32,6 @@ function App() {
   return (
     <div className="bg-(--color-1) container relative">
       <Header />
-
       <div
         className={`absolute top-0 h-full w-px bg-(--color-4) opacity-10 hidden md:block ${isRtl ? "right-[42%]" : "left-[42%]"}`}
       />
